@@ -46,7 +46,7 @@ export default function BookmarkCard({ bookmark, onDelete }: BookmarkCardProps) 
         <div className="flex items-start justify-between mb-4">
           <div className="flex items-start gap-3">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-lg font-semibold shadow-lg">
-              {bookmark.favicon || bookmark.title.charAt(0).toUpperCase()}
+              {bookmark?.favicon || bookmark.title.charAt(0).toUpperCase()}
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="font-semibold text-wrap text-gray-900 text-lg mb-1 truncate group-hover:text-blue-600 transition-colors">

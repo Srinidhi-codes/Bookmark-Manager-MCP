@@ -1,5 +1,6 @@
 export interface Bookmark {
     id: string;
+    favicon?: string;
     url: string;
     title: string;
     notes: string;
@@ -11,5 +12,7 @@ export interface Bookmark {
 export interface CreateBookmarkInput {
     url: string;
     title: string;
-    notes: string;
-}
+    notes?: string;
+    category?: string; // ✅ add this line
+  }
+  

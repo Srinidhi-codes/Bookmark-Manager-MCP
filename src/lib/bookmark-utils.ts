@@ -27,15 +27,16 @@ export async function searchUserBookmarks(
     try {
         const bookmarks = await prisma.bookmark.findMany({
             where: {
-                userId,
-                OR: [
-                    { title: { contains: query, mode: "insensitive" } },
-                    { url: { contains: query, mode: "insensitive" } },
-                    { notes: { contains: query, mode: "insensitive" } },
-                ],
+              userId,
+              OR: [
+                { title: { contains: query } },
+                { url: { contains: query } },
+                { notes: { contains: query } },
+              ],
             },
             orderBy: { createdAt: "desc" },
-        });
+          });
+          
         return bookmarks;
     } catch (error) {
         console.error("Error searching user bookmarks:", error);
