@@ -2,11 +2,12 @@
   "name": "mcp-server-local",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
-    "lint": "eslint"
+"scripts": {
+  "dev": "next dev --turbopack",
+  "build": "prisma generate && next build --turbopack",
+  "postbuild": "prisma migrate deploy",
+  "start": "next start",
+  "lint": "eslint"
   },
   "dependencies": {
     "@clerk/mcp-tools": "^0.3.1",

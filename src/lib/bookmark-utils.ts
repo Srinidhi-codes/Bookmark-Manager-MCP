@@ -1,4 +1,5 @@
-import { Bookmark, PrismaClient } from "../generated/prisma";
+import { PrismaClient, Bookmark } from "@prisma/client";
+
 import { CreateBookmarkInput } from "@/types/bookmark";
 
 const prisma = new PrismaClient();
