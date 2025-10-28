@@ -1,7 +1,6 @@
 import { Bookmark } from '@/types/bookmark';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Trash2, Calendar } from 'lucide-react';
 
 interface BookmarkCardProps {
@@ -22,23 +21,23 @@ export default function BookmarkCard({ bookmark, onDelete }: BookmarkCardProps) 
     try {
       const domain = new URL(url).hostname;
       return domain.replace('www.', '');
-    } catch (error) {
+    } catch {
       return 'Invalid URL';
     }
   };
 
-  const getCategoryColor = (category?: string) => {
-    const colors = {
-      Development: 'bg-blue-100 text-blue-800 border-blue-200',
-      Design: 'bg-purple-100 text-purple-800 border-purple-200',
-      Tools: 'bg-green-100 text-green-800 border-green-200',
-      Learning: 'bg-orange-100 text-orange-800 border-orange-200',
-      Entertainment: 'bg-pink-100 text-pink-800 border-pink-200',
-      News: 'bg-red-100 text-red-800 border-red-200',
-      Other: 'bg-gray-100 text-gray-800 border-gray-200'
-    };
-    return colors[category as keyof typeof colors] || colors.Other;
-  };
+  // const getCategoryColor = (category?: string) => {
+  //   const colors = {
+  //     Development: 'bg-blue-100 text-blue-800 border-blue-200',
+  //     Design: 'bg-purple-100 text-purple-800 border-purple-200',
+  //     Tools: 'bg-green-100 text-green-800 border-green-200',
+  //     Learning: 'bg-orange-100 text-orange-800 border-orange-200',
+  //     Entertainment: 'bg-pink-100 text-pink-800 border-pink-200',
+  //     News: 'bg-red-100 text-red-800 border-red-200',
+  //     Other: 'bg-gray-100 text-gray-800 border-gray-200'
+  //   };
+  //   return colors[category as keyof typeof colors] || colors.Other;
+  // };
 
   return (
     <Card className="group hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-1 bg-white/80 backdrop-blur-sm border-gray-200/50 hover:border-blue-300/50">

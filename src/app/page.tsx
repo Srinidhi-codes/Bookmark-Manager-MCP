@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
 import BookmarkForm from '@/components/BookmarkForm';
 import BookmarkList from '@/components/BookmarkList';
-import { Plus, Search, Bookmark, Sparkles } from 'lucide-react';
+import { Plus, Search, Bookmark } from 'lucide-react';
 
 export default function Home() {
   const { bookmarks, loading, error, addBookmark, deleteBookmark, refetch } = useBookmarks();

@@ -20,7 +20,7 @@ export default function BookmarkList({
         </div>
         <h3 className="text-xl font-semibold text-gray-900 mb-2">No Bookmarks Yet</h3>
         <p className="text-gray-600 max-w-md mx-auto">
-          Add your first bookmark to get started. Click the "Add Bookmark" button to begin building your collection.
+        Add your first bookmark to get started. Click the &quot;Add Bookmark&quot; button to begin building your collection.
         </p>
       </div>
     );
